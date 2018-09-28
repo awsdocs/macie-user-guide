@@ -94,10 +94,10 @@ You can use the following procedure to add new and edit existing custom basic al
 1. Do one of the following:
    + If you're editing the existing alert, make your changes, including enabling or disabling the alert, and then choose **Save**\.
    + If you're adding a new alert, on the **Basic alert definition** page, specify the following:
-     + Alert title \- for example, "An S3 bucket has an IAM policy that grants 'read' rights to everyone\." 
-     + Description for the alert \- for example, "An IAM policy on an S3 bucket contains a clause that effectively grants 'read' access to any user\. It is recommended that you audit this S3 bucket and its data and confirm that this is intentional\.
+     + Alert title \- for example, "An S3 bucket has an S3 bucket policy or S3 ACL that grants 'read' rights to everyone\." 
+     + Description for the alert \- for example, "An S3 bucket policy or S3 ACL on an S3 bucket contains a clause that effectively grants 'read' access to any user\. It is recommended that you audit this S3 bucket and its data and confirm that this is intentional\.
      + Alert category \- for more information, see [Alert Categories in Macie](#macie-alert-categories)\.
-     + Alert query \- a query that describes the activity that you want Macie to generate an alert about\. For example, `s3_world_readability:"true"`\. This query looks for an IAM policy on an S3 bucket that grants 'read' access to any user\. For more information about constructing queries, see [Constructing Queries in Macie](macie-research.md#macie-query)\.
+     + Alert query \- a query that describes the activity that you want Macie to generate an alert about\. For example, `s3_world_readability:"true"`\. This query looks for an S3 bucket policy or S3 ACL policy on an S3 bucket that grants 'read' access to any user\. For more information about constructing queries, see [Constructing Queries in Macie](macie-research.md#macie-query)\.
 **Note**  
 You can use the looking glass icon next to an existing alert to navigate to the **Research** tab\. This alert's query is then automatically displayed in the **Query Parser** and the results of this query are displayed in the **Research** tab\. 
      + Query index \- this is the repository of data against which Macie will run the query specified in this alert\. You can select either CloudTrail data, S3 buckets, or S3 objects\. Depending on your selection, the alert will contain either a list of cloud trail user sessions \(5\-minute aggregates of raw CloudTrail data\), a list of S3 buckets, or a list of S3 objects that match the activity that your alert defines\.
@@ -178,7 +178,7 @@ When whitelisting a user in a basic alert with the index of CloudTrail data, you
 
 1. Navigate to the Macie console's **Settings** tab\. 
 
-   Note that the original managed alert that you worked with in the previous step is now disabled\. Note also that this alert has been cloned into a new custom basic alert\. For example, if your original managed basic alert was called "An S3 bucket has an IAM policy that grants 'read' rights to everyone", this alert is now disabled and a new \(cloned\) custom basic alert called "An S3 bucket has an IAM policy that grants 'read' rights to everyone \(modified\)" is created\.
+   Note that the original managed alert that you worked with in the previous step is now disabled\. Note also that this alert has been cloned into a new custom basic alert\. For example, if your original managed basic alert was called "An S3 bucket has an S3 bucket policy or S3 ACL that grants 'read' rights to everyone", this alert is now disabled and a new \(cloned\) custom basic alert called "An S3 bucket has an S3 bucket policy or S3 ACL that grants 'read' rights to everyone \(modified\)" is created\.
 
 1. Choose the edit icon next to the cloned custom basic alert\.
 
