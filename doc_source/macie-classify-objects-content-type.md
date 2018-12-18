@@ -6,7 +6,7 @@ To classify your data objects by content type, Macie uses an identifier that is 
 
 Macie can assign only one content type to an object\.
 
-You cannot modify existing or add new content types\. You can enable or disable any existing content type\(s\), thus enabling or disabling Macie to assign these content types to your objects during the classification process\.<a name="enable-disable-content-types"></a>
+You can't modify existing or add new content types\. You can enable or disable any existing content types, thus enabling or disabling Macie to assign these them to your objects during the classification process\.<a name="enable-disable-content-types"></a>
 
 **To view, enable, or disable content types**
 
@@ -16,9 +16,9 @@ You cannot modify existing or add new content types\. You can enable or disable 
 
 1. Choose any of the listed managed content types to view its details\.
 
-   To enable or disable a content type, on its details page, use the **Enabled/Disabled** drop\-down menu, and then choose **Save**\.
+   To enable or disable a content type, on its details page, use the **Enabled/Disabled** dropdown and choose **Save**\.
 
-The following list describes all content types that Macie can assign to your objects:
+The following list describes the complete list of content types that Macie can assign to your objects\.
 
 
 |  |  |  |  | 

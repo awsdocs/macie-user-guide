@@ -1,18 +1,18 @@
 # Protecting Data with Amazon Macie<a name="macie-protect-data"></a>
 
 **Topics**
-+ [CloudTrail events](#cloud-trail-events)
-+ [CloudTrail errors](#cloud-trail-errors)
++ [AWS CloudTrail Events](#cloud-trail-events)
++ [AWS CloudTrail Errors](#cloud-trail-errors)
 
-Macie can help you monitor how your sensitive and business\-critical data stored in the cloud is being used\. Macie applies artificial intelligence to understand historical data access patterns and automatically assesses activity of users, applications and service accounts\. This can help you detect unauthorized access and avoid data leaks\.
+Macie can help you monitor how your sensitive and business\-critical data stored in the cloud is being used\. Macie applies artificial intelligence to understand historical data access patterns and automatically assesses activity of users, applications, and service accounts\. This can help you detect unauthorized access and avoid data leaks\.
 
-Once you enable Macie it uses the following automated methods to protect your data:
+Once you enable Macie, it uses the following automated methods to protect your data\.
 
-## CloudTrail events<a name="cloud-trail-events"></a>
+## AWS CloudTrail Events<a name="cloud-trail-events"></a>
 
-Macie analyzes and processes a subset of CloudTrail\-logged data and management events \(API calls\) that can occur within your infrastructure\. Macie designates a risk level between 1 and 10 for each of the supported CloudTrail events\. 
+Macie analyzes and processes a subset of data that CloudTrail logs and management events \(API calls\) that can occur in your infrastructure\. Macie designates a risk level between 1 and 10 for each of the supported CloudTrail events\. 
 
-You cannot modify existing or add new CloudTrail events to the Macie\-managed list\. You can enable or disable the supported CloudTrail events, thus instructing Macie to either include or exclude them in its data security process\.<a name="enable-disable-cloud-trail-events"></a>
+You can't modify existing or add new CloudTrail events to the list that Macie manages\. You can enable or disable the supported CloudTrail events, thus instructing Macie to either include or exclude them in its data security process\.<a name="enable-disable-cloud-trail-events"></a>
 
 **To view, enable, or disable supported CloudTrail events**
 
@@ -22,13 +22,13 @@ You cannot modify existing or add new CloudTrail events to the Macie\-managed li
 
 1. Choose any of the listed events to view its details\.
 
-   To enable or disable an event, on its details page, use the **Enabled/Disabled** drop\-down menu, and then choose **Save**\.
+   To enable or disable an event, on its details page, use the **Enabled/Disabled** dropdown and then choose **Save**\.
 
-## CloudTrail errors<a name="cloud-trail-errors"></a>
+## AWS CloudTrail Errors<a name="cloud-trail-errors"></a>
 
-Macie analyzes and processes errors that can occur when Macie\-supported subset of CloudTrail\-logged data and management events \(API calls\) take place within your infrastructure\. Macie designates a risk level between 1 and 10 for each of the supported CloudTrail errors\. 
+Macie analyzes and processes errors that can occur when a subset of data that CloudTrail logs and management events \(API calls\) take place in your infrastructure\. Macie designates a risk level between 1 and 10 for each of the supported CloudTrail errors\. 
 
-You cannot modify existing or add new CloudTrail errors to the Macie\-managed list\. You can enable or disable the supported CloudTrail errors, thus instructing Macie to either include or exclude them in its data security process\.<a name="enable-disable-cloud-trail-errors"></a>
+You can't modify existing or add new CloudTrail errors to the list that Macie manages\. You can enable or disable the supported CloudTrail errors, thus instructing Macie to either include or exclude them in its data security process\.<a name="enable-disable-cloud-trail-errors"></a>
 
 **To view, enable, or disable supported CloudTrail errors**
 
@@ -38,4 +38,4 @@ You cannot modify existing or add new CloudTrail errors to the Macie\-managed li
 
 1. Choose any of the listed errors to view its details\.
 
-   To enable or disable an error, on its details page, use the **Enabled/Disabled** drop\-down menu, and then choose **Save**\.
+   To enable or disable an error, on its details page, use the **Enabled/Disabled** dropdown and then choose **Save**\.

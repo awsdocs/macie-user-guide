@@ -2,23 +2,23 @@
 
 Once Macie begins monitoring your data, it uses several automatic content classification methods to identify and prioritize your sensitive and critical data and to accurately assign business value to your data\. One of these methods is classifying by regex\.
 
-Object classification by regex is based on specific data or data patterns that Macie searches for as it examines the contents of data objects\. Macie offers a set of managed regex, each with a designated risk level between 1 and 10\. 
+Object classification by regex is based on specific data or data patterns that Macie searches for as it examines the contents of data objects\. Macie offers a set of managed regexes, each with a designated risk level between 1 and 10\. 
 
-Macie can assign one or more regex to an object\.
+Macie can assign one or more regexes to an object\.
 
-You cannot modify existing or add new regex\. You can enable or disable any existing regex, thus enabling or disabling Macie to assign these regex to your objects during the classification process\.<a name="enable-disable-regex"></a>
+You can't modify existing or add new regexes\. You can enable or disable any existing regexes, thus enabling or disabling Macie to assign them to your objects during the classification process\.<a name="enable-disable-regex"></a>
 
-**To view, enable, or disable regex**
+**To view, enable, or disable regexes**
 
 1. In the Macie console, navigate to the **Settings** page\.
 
 1. In the **Classify data** section, choose **Regex**\.
 
-1. Choose any of the listed managed regex to view its details\.
+1. Choose any of the listed managed regexes to view its details\.
 
-   To enable or disable a regex, on its details page, use the **Enabled/Disabled** drop\-down menu, and then choose **Save**\.
+   To enable or disable a regex, on its details page, use the **Enabled/Disabled** dropdown and choose **Save**\.
 
-The following is the complete list of regex that Macie can assign to your objects during classification:
+The following is the complete list of regexes that Macie can assign to your objects during classification\.
 
 
 |  |  |  |  | 

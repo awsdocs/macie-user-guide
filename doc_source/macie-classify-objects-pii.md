@@ -1,6 +1,6 @@
-# Personally Identifiable Information \(PII\)<a name="macie-classify-objects-pii"></a>
+# Personally Identifiable Information<a name="macie-classify-objects-pii"></a>
 
-Object classification by PII is based on recognizing any personally identifiable artifacts based on industry standards such as NIST\-80\-122 and FIPS 199\. Macie is able to recognize the following PII artifacts: 
+Object classification by personally identifiable information \(PII\) is based on recognizing any personally identifiable artifacts based on industry standards such as NIST\-80\-122 and FIPS 199\. Macie can recognize the following PII artifacts: 
 + Full names
 + Mailing addresses
 + Email addresses
@@ -17,5 +17,5 @@ As part of PII object classification, Macie also assigns each matching object a 
 + Moderate
   + >= 5 names or emails and any combination of other PII
 + Low
-  + 1\-5 names or emails and any combination of PII
+  + 1–5 names or emails and any combination of PII
   + Any quantity of PII attributes above \(without names or emails\)

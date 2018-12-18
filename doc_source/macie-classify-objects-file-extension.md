@@ -6,7 +6,7 @@ Macie can also classify your objects by their file extensions\. Macie offers a s
 
 Macie can assign only one file extension to an object\.
 
-You cannot modify existing or add new file extensions\. You can enable or disable any existing file extensions, thus enabling or disabling Macie to assign these file extensions to your objects during the classification process\.<a name="enable-disable-file-extensions"></a>
+You can't modify existing or add new file extensions\. You can enable or disable any existing file extensions, thus enabling or disabling Macie to assign them to your objects during the classification process\.<a name="enable-disable-file-extensions"></a>
 
 **To view, enable, or disable file extensions**
 
@@ -16,9 +16,9 @@ You cannot modify existing or add new file extensions\. You can enable or disabl
 
 1. Choose any of the listed managed file extensions to view its details\.
 
-   To enable or disable a file extension, on its details page, use the **Enabled/Disabled** drop\-down menu, and then choose **Save**\.
+   To enable or disable a file extension, on its details page, use the **Enabled/Disabled** dropdown and choose **Save**\.
 
-The following is the complete list of file extensions that Macie can assign to your objects during classification: 
+The following is the complete list of file extensions that Macie can assign to your objects during classification\.
 
 
 |  |  |  |  | 

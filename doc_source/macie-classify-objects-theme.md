@@ -6,7 +6,7 @@ Object classification by theme is based on keywords that Macie searches for as i
 
 Macie can assign one or more themes to an object\.
 
-You cannot modify existing or add new themes\. You can enable or disable any existing theme\(s\), thus enabling or disabling Macie to assign these themes to your objects during the classification process\.<a name="enable-disable-themes"></a>
+You can't modify existing or add new themes\. You can enable or disable any existing themes, thus enabling or disabling Macie to assign them to your objects during the classification process\.<a name="enable-disable-themes"></a>
 
 **To view, enable, or disable themes**
 
@@ -16,9 +16,9 @@ You cannot modify existing or add new themes\. You can enable or disable any exi
 
 1. Choose any of the listed managed themes to view its details\.
 
-   To enable or disable a theme, on its details page, use the **Enabled/Disabled** drop\-down menu, and then choose **Save**\.
+   To enable or disable a theme, on its details page, use the **Enabled/Disabled** dropdown and then choose **Save**\.
 
-The following is the complete list of themes that Macie can assign to your objects during classification:
+The following is the complete list of themes that Macie can assign to your objects during classification\.
 
 
 |  |  |  | 
