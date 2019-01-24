@@ -22,7 +22,7 @@ If you specify S3 buckets that include files of a format that isn't supported in
 
 ## Object Risk Level<a name="compound-score"></a>
 
-Through the automatic classification methods previously described, an object that Macie monitors is assigned various risk levels based on each content type, file extension, theme, regex, PII, and SVM artifact that is assigned to it\. The object's compound \(final\) risk level is then set to the highest value of its assigned risk levels\.
+Through the automatic classification methods previously described, an object that Macie monitors is assigned various risk levels based on each content type, file extension, theme, regex, and SVM artifact that is assigned to it\. The object's compound \(final\) risk level is then set to the highest value of its assigned risk levels\.
 
 ## Retention Duration for S3 Metadata<a name="metadata-retention-duration"></a>
 
