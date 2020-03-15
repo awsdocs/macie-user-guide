@@ -9,7 +9,7 @@ The **Users** tab can help you draw a comprehensive picture of all of the data a
 
 ## MacieUniqueID<a name="macie-users-concepts"></a>
 
-In the context of Macie, a user is the AWS Identity and Access Management \(IAM\) identity that makes a particular request\. Macie uses the AWS CloudTrail `userIdentity` element to distinguish the following user types\. For more information, see [CloudTrail userIdentity Element](http://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-event-reference-user-identity.html)\. 
+In the context of Macie, a user is the AWS Identity and Access Management \(IAM\) identity that makes a particular request\. Macie uses the AWS CloudTrail `userIdentity` element to distinguish the following user types\. For more information, see [CloudTrail userIdentity Element](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-event-reference-user-identity.html)\. 
 + Root – The request was made with your AWS account credentials\.
 + IAM user – The request was made with the credentials of an IAM user\. 
 + Assumed role – The request was made with temporary security credentials that were obtained with a role via a call to the AWS Security Token Service \(AWS STS\) `AssumeRole` API operation\. 
@@ -17,20 +17,20 @@ In the context of Macie, a user is the AWS Identity and Access Management \(IAM\
 + AWS account – The request was made by another account\. 
 + AWS service – The request was made by an account that belongs to an AWS service\. 
 
-When specifying a user in the Macie console, you must use a special Macie format called `macieUniqueId`\. Examples of specifying a user include searching for a user in the **Users** tab, constructing a query in the **Research** tab, and whitelisting a user in a basic alert with the index of **CloudTrail data**\. The `macieUniqueId` is a combination of the IAM `UserIdentity` element and the `recipientAccountId`\. For more information, see [CloudTrail userIdentity Element](http://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-event-reference-user-identity.html) and the definition of `recipientAccountId` in [CloudTrail Record Contents](http://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-event-reference-record-contents.html)\. 
+When specifying a user in the Macie console, you must use a special Macie format called `macieUniqueId`\. Examples of specifying a user include searching for a user in the **Users** tab, constructing a query in the **Research** tab, and whitelisting a user in a basic alert with the index of **CloudTrail data**\. The `macieUniqueId` is a combination of the IAM `UserIdentity` element and the `recipientAccountId`\. For more information, see [CloudTrail userIdentity Element](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-event-reference-user-identity.html) and the definition of `recipientAccountId` in [CloudTrail Record Contents](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-event-reference-record-contents.html)\. 
 
 The following examples list various structures of `macieUniqueId`, depending on the user identity type\.
 
 
 | userIdentity | MacieUniqueId | 
 | --- | --- | 
-|  <pre>"userIdentity": {<br />    "type": "AssumedRole"<br />    "arn": "arn:aws:sts::123456789012:assumed-role/Accounting-Role/Mary"<br />}<br /></pre>  |  `123456789012:assumed-role/accounting-role`  | 
-|  <pre>"userIdentity": {<br />    "type": "IAMUser",<br />    "arn": "arn:aws:iam::123456789012:user/Bob",<br />    "userName": "Bob"<br />}<br /></pre>  |  `123456789012:user:bob`  | 
-|  <pre>"userIdentity": {<br />    "type": "FederatedUser"<br />    "arn": "arn:aws:sts::123456789012:federated-user/Alice",<br />    "principalId": "123456789012:Alice",<br />}<br /></pre>  |  `123456789012:federated-user:alice`  | 
-|  <pre>"recipientAccountId": "123456789012",<br />"userIdentity": {<br />    "type": "AWSAccount"<br />    "accountId": "ANONYMOUS_PRINCIPAL",<br />}<br /></pre>  |  `123456789012:ANONYMOUS_PRINCIPAL`   | 
-|  <pre>"macieUniqueId": "123456789012:root:root",<br />"userIdentity": {<br />    "type": "Root"<br />    "sourceARN": "arn:aws:iam::123456789012:root",<br />}<br /></pre>  |  `123456789012:root:root`  | 
-|  <pre>"userIdentity": {<br />    "invokedBy": "codepipeline.amazonaws.com",<br />    "type": "AWSService"<br />}<br />"recipientAccountId": "123456789012",<br /></pre>  |  `123456789012:codepipeline.amazonaws.com`   | 
-|  <pre>"recipientAccoundId": "123456789012",<br />"userIdentity": {<br />    "type": "AWSAccount"<br />    "accountId": "987654321098",<br />    "principalId": "AIDABCDEFGHI123456XYZ",<br />}<br /></pre>  |  `123456789012:AIDABCDEFGHI123456XYZ`  | 
+|  <pre>"userIdentity": {<br />    "type": "AssumedRole"<br />    "arn": "arn:aws:sts::123456789012:assumed-role/Accounting-Role/Mary"<br />}</pre>  |  `123456789012:assumed-role/accounting-role`  | 
+|  <pre>"userIdentity": {<br />    "type": "IAMUser",<br />    "arn": "arn:aws:iam::123456789012:user/Bob",<br />    "userName": "Bob"<br />}</pre>  |  `123456789012:user:bob`  | 
+|  <pre>"userIdentity": {<br />    "type": "FederatedUser"<br />    "arn": "arn:aws:sts::123456789012:federated-user/Alice",<br />    "principalId": "123456789012:Alice",<br />}</pre>  |  `123456789012:federated-user:alice`  | 
+|  <pre>"recipientAccountId": "123456789012",<br />"userIdentity": {<br />    "type": "AWSAccount"<br />    "accountId": "ANONYMOUS_PRINCIPAL",<br />}</pre>  |  `123456789012:ANONYMOUS_PRINCIPAL`   | 
+|  <pre>"macieUniqueId": "123456789012:root:root",<br />"userIdentity": {<br />    "type": "Root"<br />    "sourceARN": "arn:aws:iam::123456789012:root",<br />}</pre>  |  `123456789012:root:root`  | 
+|  <pre>"recipientAccountId": "123456789012",<br />"userIdentity": {<br />    "invokedBy": "codepipeline.amazonaws.com",<br />    "type": "AWSService"<br />}</pre>  |  `123456789012:codepipeline.amazonaws.com`   | 
+|  <pre>"recipientAccoundId": "123456789012",<br />"userIdentity": {<br />    "type": "AWSAccount"<br />    "accountId": "987654321098",<br />    "principalId": "AIDABCDEFGHI123456XYZ",<br />}</pre>  |  `123456789012:AIDABCDEFGHI123456XYZ`  | 
 
 ## User Categories in Macie<a name="macie-users-categories"></a>
 

@@ -1,4 +1,4 @@
-# Using the Amazon Macie Dashboard<a name="macie-dashboard"></a>
+# Viewing Data and Activity that Amazon Macie Monitors<a name="macie-dashboard"></a>
 
 The Macie **Dashboard** draws a comprehensive picture of all of your data and activity that Macie monitors\. This topic describes the metrics and views that you can use in the **Dashboard** to view your monitored data grouped by various interest points\. Each metric and view provides you with one or more ways of navigating to the Macie console's **Research** tab\. There you can construct and run queries in the query parser and conduct in\-depth investigative research of your data and activity that Macie monitors\.
 
@@ -188,7 +188,7 @@ You can follow this sample procedure\.<a name="d6"></a>
 
    The results of this query also appear\. You can modify the query result controls available on the **Research** tab, run the query again, and conduct in\-depth investigative research of the generated results\. For more information, see [Researching Through Data Monitored by Amazon Macie](macie-research.md)\.
 
-### Activity location<a name="activitylocation"></a>
+### Activity Location<a name="activitylocation"></a>
 
 This view includes a map that shows the locations of activity that Macie is monitoring for a selected time period\. To view details, use the available time period pull\-down menu \(past 15 days, past 30 days, past 90 days, or past year\) and then choose any location pin\. 
 
@@ -200,8 +200,6 @@ You can modify the query result controls available on the **Research** tab, run 
 
 ### AWS CloudTrail Events<a name="cloudtrailevents"></a>
 
-**AWS CloudTrail events**
-
 This view provides the complete list of your CloudTrail data and management events monitored by Macie\. For each event, the total count of the user sessions \(5\-minute integrations of CloudTrail data\) that this event is present in and the percentage that this total represents of the total number of user sessions appears\.
 
 To navigate from this view to the **Research** tab, choose the looking glass icon next to any of the displayed events\. Your selection is automatically translated into a query that appears in the query parser in the **Research** tab\. For example, you can autogenerate the following query to view all user sessions that the **AssumeRole** event is present in\.
@@ -211,8 +209,6 @@ To navigate from this view to the **Research** tab, choose the looking glass ico
 You can modify the query result controls available on the **Research** tab, run the query again, and conduct in\-depth investigative research of the generated results\. For more information, see [Researching Through Data Monitored by Amazon Macie](macie-research.md)\. 
 
 ### Activity ISPs<a name="activityisp"></a>
-
-**Activity ISPs**
 
 This view provides the complete list of your CloudTrail data and management events monitored by Macie, grouped by the associated internet service providers \(ISPs\)\. For each ISP, the total count of the user sessions \(5\-minute integrations of CloudTrail data\) that this ISP is present in and the percentage that this total represents of the total number of user sessions appears\. 
 

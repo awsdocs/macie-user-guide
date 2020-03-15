@@ -2,10 +2,9 @@
 
 Amazon Macie is a security service that uses machine learning to automatically discover, classify, and protect sensitive data in AWS\. Macie recognizes sensitive data such as personally identifiable information \(PII\) or intellectual property\. It provides you with dashboards and alerts that give visibility into how this data is being accessed or moved\. 
 
-**Important**  
-Currently, Macie is supported in the following Regions:  
-US East \(N\. Virginia\)
-US West \(Oregon\)
+Macie is supported in the following AWS Regions:
++ US East \(N\. Virginia\) \(us\-east\-1\)
++ US West \(Oregon\) \(us\-west\-2\)
 
 ## Features of Amazon Macie<a name="macie-features"></a>
 
@@ -35,8 +34,6 @@ Pricing in Macie is based on the content sources classified or processed\. For d
 
 ## Accessing Macie<a name="macie-accessing"></a>
 
-You can work with Macie in any of the following ways: 
-
-**Macie console**  
-Sign in to the AWS Management Console and open the Macie console at [https://us\-east\-1\.redirection\.macie\.aws\.amazon\.com/](https://us-east-1.redirection.macie.aws.amazon.com/)\.   
-The console is a browser\-based interface to access and use Macie\.
+The Macie console is a browser\-based interface to access and use Macie\. Sign in to your AWS account and open the Macie console using one of the following links:
++ [https://us\-east\-1\.redirection\.macie\.aws\.amazon\.com/](https://us-east-1.redirection.macie.aws.amazon.com/)
++ [https://us\-west\-2\.redirection\.macie\.aws\.amazon\.com/](https://us-west-2.redirection.macie.aws.amazon.com/)

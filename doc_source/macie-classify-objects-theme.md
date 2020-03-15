@@ -2,7 +2,7 @@
 
 Once Macie begins monitoring your data, it uses several automatic content classification methods to identify and prioritize your sensitive and critical data and to accurately assign business value to your data\. One of these methods is classifying by theme\.
 
-Object classification by theme is based on keywords that Macie searches for as it examines the contents of data objects\. Macie offers a set of managed themes, each with a designated risk level between 1 and 10\. 
+Object classification by theme is based on keywords that Macie searches for as it examines the contents of data objects\. Macie offers a set of managed themes, each with a designated risk level between 1 and 10, with 10 being the highest risk and 1 being the lowest\.
 
 Macie can assign one or more themes to an object\.
 

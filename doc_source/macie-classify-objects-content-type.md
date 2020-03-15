@@ -2,7 +2,7 @@
 
 Once Macie begins monitoring your data, it uses several automatic content classification methods to identify and prioritize your sensitive and critical data and to accurately assign business value to your data\. One of these methods is classifying by content type\.
 
-To classify your data objects by content type, Macie uses an identifier that is embedded in the file header\. Macie offers a set of managed \(Macie\-curated\) content types, each with a designated risk level between 1 and 10\. 
+To classify your data objects by content type, Macie uses an identifier that is embedded in the file header\. Macie offers a set of managed \(Macie\-curated\) content types, each with a designated risk level between 1 and 10, with 10 being the highest risk and 1 being the lowest\.
 
 Macie can assign only one content type to an object\.
 

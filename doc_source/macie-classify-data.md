@@ -2,12 +2,14 @@
 
 Macie can help you classify your sensitive and business\-critical data stored in the cloud\. Currently, Macie analyzes and processes data stored in Amazon S3 buckets\. To classify your data, Macie also uses the ability in AWS CloudTrail to capture object\-level API activity on S3 objects \(data events\)\. However, Macie monitors CloudTrail data events only if you specify at least one S3 bucket for Macie to monitor\. 
 
-Once you specify the S3 bucket or buckets for Macie to monitor, you enable Macie to continuously monitor and discover new data as it enters your AWS infrastructure\. For more information on how to specify S3 buckets for Macie to monitor, see [Specifying Data for Macie to Monitor](macie-integration.md#macie-integration-services)\.
+After you specify the S3 bucket or buckets for Macie to monitor, you enable Macie to continuously monitor and discover new data as it enters your AWS infrastructure\. For more information, see [Specifying Data for Macie to Monitor](macie-integration.md#macie-integration-services)\.
 
-**Note**  
-Macie's content classification engine processes up to the first 20 MB of an S3 object\. 
+**Limits**
++ Macie has a default limit on the amount of data that it can classify in an account\. After this data limit is reached, Macie stops classifying the data in this account\. The default data classification limit is 3 TB\. You can contact AWS Support and request an increase to the default limit\.
++ If you specify S3 buckets that include files of a format that isn't supported in Macie, Macie doesn't classify them\.
++ Macie's content classification engine processes up to the first 20 MB of an S3 object\.
 
-If you specify S3 buckets that include files of a format that isn't supported in Macie, Macie doesn't classify them, and your Macie usage charges don't include any costs for this content\. Your Macie usage charges include only the costs for the content that Macie processes\. For example, Macie can't extract text from \.wav files \(images or movies\); therefore, it doesn’t process that content, and you’re not charged for it\.
+Your Macie usage charges include only the costs for the content that Macie processes\. For example, Macie can't extract text from \.wav files \(images or movies\); therefore, it doesn’t process that content and you’re not charged for it\.
 
 **Topics**
 + [Supported Compression and Archive File Formats](macie-compression-archive-formats.md)

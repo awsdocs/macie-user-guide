@@ -2,7 +2,7 @@
 
 Once Macie begins monitoring your data, it uses several automatic content classification methods to identify and prioritize your sensitive and critical data and to accurately assign business value to your data\. One of these methods is classifying by regex\.
 
-Object classification by regex is based on specific data or data patterns that Macie searches for as it examines the contents of data objects\. Macie offers a set of managed regexes, each with a designated risk level between 1 and 10\. 
+Object classification by regex is based on specific data or data patterns that Macie searches for as it examines the contents of data objects\. Macie offers a set of managed regexes, each with a designated risk level between 1 and 10, with 10 being the highest risk and 1 being the lowest\.
 
 Macie can assign one or more regexes to an object\.
 

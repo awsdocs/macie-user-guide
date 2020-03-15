@@ -2,7 +2,7 @@
 
 Once Macie begins monitoring your data, it uses several automatic content classification methods to identify and prioritize your sensitive and critical data and to accurately assign business value to your data\. One of these methods is classifying by file extension\.
 
-Macie can also classify your objects by their file extensions\. Macie offers a set of managed file extensions, each with a designated risk level between 1 and 10\. 
+Macie can also classify your objects by their file extensions\. Macie offers a set of managed file extensions, each with a designated risk level between 1 and 10, with 10 being the highest risk and 1 being the lowest\.
 
 Macie can assign only one file extension to an object\.
 

@@ -4,10 +4,9 @@ Amazon Macie sends notifications based on CloudWatch Events when any change in t
 
 Macie sends notifications based on CloudWatch Events for the alerts generated in both master and member Macie accounts\. However, only the master Macie account has access to the generated events in CloudWatch Events\. For more information about master and member accounts, see [Concepts and Terminology](macie-concepts.md)\.
 
-The [event](http://docs.aws.amazon.com/AmazonCloudWatch/latest/events/CloudWatchEventsandEventPatterns.html) for Macie in CloudWatch Events has the following format\.
+## Event Format<a name="macie-cloudwatch-event-format"></a>
 
-**Note**  
-In the following example format, the fictional account ID of "111122223333" represents the ID of the master Macie account\.
+The [event](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/CloudWatchEventsandEventPatterns.html) for Macie in CloudWatch Events has the following format\. The fictional account ID "111122223333" represents the ID of the master Macie account\.
 
 ```
 {
@@ -46,22 +45,27 @@ In the following example format, the fictional account ID of "111122223333" repr
 }
 ```
 
-Complete the following procedure to configure your master Macie account to receive events in CloudWatch Events from Macie and pipe those events into an Amazon Simple Queue Service \(Amazon SQS\) queue\. Before completing this procedure, make sure to create the Amazon SQS queue for the events from Macie\. For more information, see [Tutorial: Creating an Amazon SQS Queue](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-create-queue.html)\.
+## Configure CloudWatch Events<a name="macie-configure-cloudwatch-events"></a>
 
-1. Open the Amazon CloudWatch console at [https://console\.aws\.amazon\.com/cloudwatch/](https://console.aws.amazon.com/cloudwatch/)\. 
+Complete the following procedure to configure your master Macie account to receive events in CloudWatch Events from Macie and pipe those events into an Amazon Simple Queue Service \(Amazon SQS\) queue\.
 
-1. In the navigation pane, choose **Events** and then choose **Create rule**\. 
+**Prerequisite**  
+Create an Amazon SQS queue for the events from Macie\. For more information, see [Tutorial: Creating an Amazon SQS Queue](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-create-queue.html)\.
+
+**To configure CloudWatch events for your master Macie account**
+
+1. Open the CloudWatch console at [https://console\.aws\.amazon\.com/cloudwatch/](https://console.aws.amazon.com/cloudwatch/)\.
+
+1. In the navigation pane, choose **Events**, **Rules** and then choose **Create rule**\.
 
 1. Choose **Edit** and enter the following event pattern for the Macie events\.
 
    ```
    {
-      "source": [	
-      "aws.macie"
-     ]
+      "source": [
+          "aws.macie"
+      ]
    }
    ```
 
 1. In the **Targets** pane, choose **Add target**, select **SQS queue** in the target dropdown, and specify your queue for the events from Macie\.
-
-You should now be able to see Macie alerts in your specified queue in the Amazon SQS console\.
