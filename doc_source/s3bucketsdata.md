@@ -1,3 +1,9 @@
+--------
+
+This is the user guide for Amazon Macie Classic\. For information about the new Amazon Macie, see the [Amazon Macie User Guide](https://docs.aws.amazon.com/macie/latest/user/)\. To access the Macie Classic console, open the Macie console at [https://console\.aws\.amazon\.com/macie/](https://console.aws.amazon.com/macie/), and then choose **Macie Classic** in the navigation pane\.
+
+--------
+
 # Researching S3 Bucket Properties Data<a name="s3bucketsdata"></a>
 
 **Topics**
@@ -6,7 +12,7 @@
 
 ## Analyzing S3 Buckets Properties Search Results<a name="s3bucketssearchresults"></a>
 
-The following section describes the elements of the search results that appear when you use the **Research** tab to investigate your S3 bucket properties data that Macie monitors\.
+The following section describes the elements of the search results that appear when you use the **Research** tab to investigate your S3 bucket properties data that Macie Classic monitors\.
 
 Complete the following steps in the **Research** tab\.
 
@@ -33,13 +39,13 @@ You can use the fields in the search results summary to further narrow your sear
 ## S3 Bucket Properties Data Fields and Example Queries<a name="s3bucketsfields"></a>
 
 The following tables include the fields that can appear in the results of your S3 buckets metadata searches: 
-+ The first table includes the fields that Macie extracts from the Amazon S3 bucket API metadata\. For example, `acl.Grants.Grantee.DisplayName` in Macie corresponds to `Grants.Grantee.DisplayName` in the Amazon S3 `getbucket-acl` API response\.
-+ The second table includes the fields that Macie generates to provide further security intelligence and context based on the examined S3 buckets metadata\. For example, `s3_world_readability` describes a true/false/unknown state condition of whether an S3 bucket is readable by everyone as part of evaluating its Amazon S3 ACL and bucket \(IAM\) policy\.
++ The first table includes the fields that Macie Classic extracts from the Amazon S3 bucket API metadata\. For example, `acl.Grants.Grantee.DisplayName` in Macie Classic corresponds to `Grants.Grantee.DisplayName` in the Amazon S3 `getbucket-acl` API response\.
++ The second table includes the fields that Macie Classic generates to provide further security intelligence and context based on the examined S3 buckets metadata\. For example, `s3_world_readability` describes a true/false/unknown state condition of whether an S3 bucket is readable by everyone as part of evaluating its Amazon S3 ACL and bucket \(IAM\) policy\.
 
-### S3 Bucket Properties Data Fields That Macie Extracts<a name="s3bucketsfields_extracted"></a>
+### S3 Bucket Properties Data Fields That Macie Classic Extracts<a name="s3bucketsfields_extracted"></a>
 
 
-| Macie Field Name | Amazon S3 API Field Name | Amazon S3 API Operation | Macie Field Type | Description | Example Search Query | 
+| Macie Classic Field Name | Amazon S3 API Field Name | Amazon S3 API Operation | Macie Classic Field Type | Description | Example Search Query | 
 | --- | --- | --- | --- | --- | --- | 
 | `acl.Grants.Grantee.DisplayName` | `Grants.Grantee.DisplayName` | `get-bucket-acl` | String  | The display name of the S3 bucket ACL grantee\. | Search for S3 buckets accessible by John Doe:  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/macie/latest/userguide/s3bucketsdata.html)  | 
 | `acl.Grants.Grantee.ID` | `Grants.Grantee.ID` | `get-bucket-acl` | String  | The ID of the identity that was granted access to the S3 bucket by the bucket owner\. | Search for an S3 bucket's grantee with a particular canonical ID:  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/macie/latest/userguide/s3bucketsdata.html)  | 
@@ -48,7 +54,7 @@ The following tables include the fields that can appear in the results of your S
 | `acl.Grants.Permission` | `Grants.Permission` | `get-bucket-acl` | String  | The permission level assigned to the ACL grantee\. | Search for S3 buckets that grant full \(read/write\) access to anyone:  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/macie/latest/userguide/s3bucketsdata.html)  | 
 | `acl.Owner.DisplayName` | `Owner.DisplayName` | `get-bucket-acl` | String  | The display name of the S3 bucket owner\. | Search for S3 buckets owned by John Doe: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/macie/latest/userguide/s3bucketsdata.html)  | 
 | `acl.Owner.ID` | `Owner.ID` | `get-bucket-acl` | String  | The ID of the S3 bucket owner\. | Search for a particular S3 bucket owner ID: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/macie/latest/userguide/s3bucketsdata.html)  | 
-| `location.LocationConstraint` | `LocationConstraint` | `get-bucket-location` | String  | The AWS Region where the S3 bucket resides\.   By default, buckets in the us\-east\-1 Region have no region returned from the S3 API call\. To facilitate searching, Macie automatically populates them with the string “us\-east\-1”\.   |  Search for buckets hosted in the us\-west\-2 Region: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/macie/latest/userguide/s3bucketsdata.html) Search for buckets hosted in the us\-east\-1 Region: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/macie/latest/userguide/s3bucketsdata.html)  | 
+| `location.LocationConstraint` | `LocationConstraint` | `get-bucket-location` | String  | The AWS Region where the S3 bucket resides\.   By default, buckets in the us\-east\-1 Region have no region returned from the S3 API call\. To facilitate searching, Macie Classic automatically populates them with the string “us\-east\-1”\.   |  Search for buckets hosted in the us\-west\-2 Region: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/macie/latest/userguide/s3bucketsdata.html) Search for buckets hosted in the us\-east\-1 Region: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/macie/latest/userguide/s3bucketsdata.html)  | 
 | `logging.LoggingEnabled.TargetBucket` | `LoggingEnabled.TargetBucket` | `get-bucket-logging` | String  | The bucket whose logging status is being returned\. | Search for all buckets with S3 object level logging enabled:  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/macie/latest/userguide/s3bucketsdata.html)  | 
 | `logging.LoggingEnabled.TargetPrefix` | `LoggingEnabled.TargetPrefix` | `get-bucket-logging` | String  | The configured prefix or folder containing Object Level Logging data for a particular S3 bucket\. | Search for buckets configured with a prefix substring of "Production":  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/macie/latest/userguide/s3bucketsdata.html)  | 
 | `policy.Policy.Id` | `Policy.Id` | `get-bucket-policy` | String  | The ID for an S3 bucket policy\. | Search for bucket policies with a particular ID:  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/macie/latest/userguide/s3bucketsdata.html)  | 
@@ -72,13 +78,13 @@ The following tables include the fields that can appear in the results of your S
 | `website.IndexDocument.Suffix` | `IndexDocument.Suffix` | `get-bucket-website` | String  | The suffix of a webpage that Amazon S3 returns when a request is made to the root of a website or any subfolder\.  | Search for the index document configured as part of S3 static website hosting and with an index page redirection to index\.html:  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/macie/latest/userguide/s3bucketsdata.html)  | 
 | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/macie/latest/userguide/s3bucketsdata.html) | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/macie/latest/userguide/s3bucketsdata.html)  | `get-bucket-lifecycle_configuration` | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/macie/latest/userguide/s3bucketsdata.html)  | For more information, see [GET Bucket lifecycle](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketGETlifecycle.html)\. | Search for the S3 buckets with a lifecycle configuration rule whose expiration is less than 3 days:  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/macie/latest/userguide/s3bucketsdata.html)  | 
 
-### S3 Bucket Properties Data Fields That Macie Generates<a name="s3bucketsfields_macie-generated"></a>
+### S3 Bucket Properties Data Fields That Macie Classic Generates<a name="s3bucketsfields_macie-generated"></a>
 
 
-| Macie Field Name | Macie Field Type | Description | Example search query | 
+| Macie Classic Field Name | Macie Classic Field Type | Description | Example search query | 
 | --- | --- | --- | --- | 
-| `@timestamp` | Date | The timestamp when Macie last analyzed the bucket\.  | Search for S3 buckets that Macie analyzed in the last 24 hours:  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/macie/latest/userguide/s3bucketsdata.html)  | 
+| `@timestamp` | Date | The timestamp when Macie Classic last analyzed the bucket\.  | Search for S3 buckets that Macie Classic analyzed in the last 24 hours:  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/macie/latest/userguide/s3bucketsdata.html)  | 
 | `accountId` | String | The account ID of the S3 bucket owner\.  | Search for any S3 buckets that don't belong to a given account:  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/macie/latest/userguide/s3bucketsdata.html)  | 
 | `bucket` | String | The name of an S3 bucket\.  | Search for a particular S3 bucket by name:  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/macie/latest/userguide/s3bucketsdata.html)  | 
-| `s3_world_readability` | String | A value indicating whether the S3 bucket is globally readable: `true`, `false`, or `unknown`\. The `unknown` value indicates that Macie can't determine whether the S3 bucket is globally readable\.  | Search for S3 buckets that are globally readable by either the Amazon S3 ACL or bucket \(IAM\) policy:  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/macie/latest/userguide/s3bucketsdata.html)  | 
-| `s3_world_writability` | String | A value indicating if the S3 bucket is globally writable: `true`, `false`, or `unknown`\. The `unknown` value indicates that Macie can't determine whether the S3 bucket is globally writable\.  | Search for S3 buckets that is globally writable by either the Amazon S3 ACL or the bucket \(IAM\) policy:  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/macie/latest/userguide/s3bucketsdata.html)  | 
+| `s3_world_readability` | String | A value indicating whether the S3 bucket is globally readable: `true`, `false`, or `unknown`\. The `unknown` value indicates that Macie Classic can't determine whether the S3 bucket is globally readable\.  | Search for S3 buckets that are globally readable by either the Amazon S3 ACL or bucket \(IAM\) policy:  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/macie/latest/userguide/s3bucketsdata.html)  | 
+| `s3_world_writability` | String | A value indicating if the S3 bucket is globally writable: `true`, `false`, or `unknown`\. The `unknown` value indicates that Macie Classic can't determine whether the S3 bucket is globally writable\.  | Search for S3 buckets that is globally writable by either the Amazon S3 ACL or the bucket \(IAM\) policy:  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/macie/latest/userguide/s3bucketsdata.html)  | 

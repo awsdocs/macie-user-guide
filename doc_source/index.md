@@ -1,7 +1,7 @@
-# Amazon Macie User Guide
+# Amazon Macie Classic User Guide
 
 -----
-*****Copyright &copy; 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
+*****Copyright &copy; 2021 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
 Amazon's trademarks and trade dress may not be used in 
@@ -14,13 +14,14 @@ Amazon's trademarks and trade dress may not be used in
 
 -----
 ## Contents
-+ [What Is Amazon Macie?](what-is-macie.md)
++ [What Is Amazon Macie Classic?](what-is-macie.md)
++ [Moving to the New Amazon Macie](macie-migration.md)
 + [Concepts and Terminology](macie-concepts.md)
-+ [Setting Up Amazon Macie](macie-setting-up.md)
-   + [Controlling Access to Amazon Macie](macie-access-control.md)
-   + [Service-Linked Roles for Amazon Macie](using-service-linked-roles.md)
-+ [Integrating Member Accounts and Amazon S3 with Amazon Macie](macie-integration.md)
-+ [Classifying Data with Amazon Macie](macie-classify-data.md)
++ [Setting Up Amazon Macie Classic](macie-setting-up.md)
+   + [Controlling Access to Amazon Macie Classic](macie-access-control.md)
+   + [Service-Linked Roles for Amazon Macie Classic](using-service-linked-roles.md)
++ [Integrating Member Accounts and Amazon S3 with Amazon Macie Classic](macie-integration.md)
++ [Classifying Data with Amazon Macie Classic](macie-classify-data.md)
    + [Supported Compression and Archive File Formats](macie-compression-archive-formats.md)
    + [Content Type](macie-classify-objects-content-type.md)
    + [File Extension](macie-classify-objects-file-extension.md)
@@ -28,14 +29,14 @@ Amazon's trademarks and trade dress may not be used in
    + [Regex](macie-classify-objects-regex.md)
    + [Personally Identifiable Information](macie-classify-objects-pii.md)
    + [Support Vector Machine–Based Classifier](macie-classify-objects-classifier.md)
-+ [Protecting Data with Amazon Macie](macie-protect-data.md)
-+ [Viewing Data and Activity that Amazon Macie Monitors](macie-dashboard.md)
-+ [Amazon Macie Alerts](macie-alerts.md)
-+ [Analyzing Amazon Macie–Monitored Data by User Activity](macie-users.md)
-+ [Researching Through Data Monitored by Amazon Macie](macie-research.md)
++ [Protecting Data with Amazon Macie Classic](macie-protect-data.md)
++ [Viewing Data and Activity that Amazon Macie Classic Monitors](macie-dashboard.md)
++ [Amazon Macie Classic Alerts](macie-alerts.md)
++ [Analyzing Amazon Macie Classic–Monitored Data by User Activity](macie-users.md)
++ [Researching Through Data Monitored by Amazon Macie Classic](macie-research.md)
    + [Researching AWS CloudTrail Data](cloudtraildata.md)
    + [Researching S3 Bucket Properties Data](s3bucketsdata.md)
    + [Researching S3 Objects Data](s3objectsdata.md)
-+ [Disabling Amazon Macie and Deleting Collected Metadata](macie-disable.md)
-+ [Monitoring Amazon Macie Alerts with Amazon CloudWatch Events](macie-cloudwatch.md)
-+ [Document History for Amazon Macie](doc-history.md)
++ [Disabling Amazon Macie Classic and Deleting Collected Metadata](macie-disable.md)
++ [Monitoring Amazon Macie Classic Alerts with Amazon CloudWatch Events](macie-cloudwatch.md)
++ [Document History for Amazon Macie Classic](doc-history.md)

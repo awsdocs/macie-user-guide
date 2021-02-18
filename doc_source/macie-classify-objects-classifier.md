@@ -1,11 +1,17 @@
+--------
+
+This is the user guide for Amazon Macie Classic\. For information about the new Amazon Macie, see the [Amazon Macie User Guide](https://docs.aws.amazon.com/macie/latest/user/)\. To access the Macie Classic console, open the Macie console at [https://console\.aws\.amazon\.com/macie/](https://console.aws.amazon.com/macie/), and then choose **Macie Classic** in the navigation pane\.
+
+--------
+
 # Support Vector Machine–Based Classifier<a name="macie-classify-objects-classifier"></a>
 
-Another method that Macie uses to classify your S3 objects is the Support Vector Machine \(SVM\) classifier\. It classifies content inside your S3 objects \(text, token n\-grams, and character n\-grams\) that Macie monitors and their metadata features \(document length, extension, encoding, headers\) to accurately classify documents based on content\. This classifier, managed by Macie, was trained against a large corpus of training data of various types and has been optimized to support accurate detection of various content types, including source code, application logs, regulatory documents, and database backups\. The classifier can also generalize its detections\. For example, if it detected a new kind of source code that doesn't match any of the types of source code that it is trained to recognize, it can generalize the detection as being "source code\."
+Another method that Macie Classic uses to classify your S3 objects is the Support Vector Machine \(SVM\) classifier\. It classifies content inside your S3 objects \(text, token n\-grams, and character n\-grams\) that Macie Classic monitors and their metadata features \(document length, extension, encoding, headers\) to accurately classify documents based on content\. This classifier, managed by Macie Classic, was trained against a large corpus of training data of various types and has been optimized to support accurate detection of various content types, including source code, application logs, regulatory documents, and database backups\. The classifier can also generalize its detections\. For example, if it detected a new kind of source code that doesn't match any of the types of source code that it is trained to recognize, it can generalize the detection as being "source code\."
 
 **Note**  
-This data classification method isn't surfaced in the **Settings** page\. Macie manages the following list of artifacts\. You can't edit, enable, or disable them\.
+This data classification method isn't surfaced in the **Settings** page\. Macie Classic manages the following list of artifacts\. You can't edit, enable, or disable them\.
 
-The SVM classifier in Macie is trained to detect the following content types:
+The SVM classifier in Macie Classic is trained to detect the following content types:
 + E\-books
 + Email
 + Generic encryption keys

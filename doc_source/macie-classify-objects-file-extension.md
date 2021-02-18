@@ -1,16 +1,22 @@
+--------
+
+This is the user guide for Amazon Macie Classic\. For information about the new Amazon Macie, see the [Amazon Macie User Guide](https://docs.aws.amazon.com/macie/latest/user/)\. To access the Macie Classic console, open the Macie console at [https://console\.aws\.amazon\.com/macie/](https://console.aws.amazon.com/macie/), and then choose **Macie Classic** in the navigation pane\.
+
+--------
+
 # File Extension<a name="macie-classify-objects-file-extension"></a>
 
-Once Macie begins monitoring your data, it uses several automatic content classification methods to identify and prioritize your sensitive and critical data and to accurately assign business value to your data\. One of these methods is classifying by file extension\.
+Once Macie Classic begins monitoring your data, it uses several automatic content classification methods to identify and prioritize your sensitive and critical data and to accurately assign business value to your data\. One of these methods is classifying by file extension\.
 
-Macie can also classify your objects by their file extensions\. Macie offers a set of managed file extensions, each with a designated risk level between 1 and 10, with 10 being the highest risk and 1 being the lowest\.
+Macie Classic can also classify your objects by their file extensions\. Macie Classic offers a set of managed file extensions, each with a designated risk level between 1 and 10, with 10 being the highest risk and 1 being the lowest\.
 
-Macie can assign only one file extension to an object\.
+Macie Classic can assign only one file extension to an object\.
 
-You can't modify existing or add new file extensions\. You can enable or disable any existing file extensions, thus enabling or disabling Macie to assign them to your objects during the classification process\.<a name="enable-disable-file-extensions"></a>
+You can't modify existing or add new file extensions\. You can enable or disable any existing file extensions, thus enabling or disabling Macie Classic to assign them to your objects during the classification process\.<a name="enable-disable-file-extensions"></a>
 
 **To view, enable, or disable file extensions**
 
-1. In the Macie console, navigate to the **Settings** page\.
+1. In the Macie Classic console, navigate to the **Settings** page\.
 
 1. In the **Classify data** section, choose **File extensions**\.
 
@@ -18,7 +24,7 @@ You can't modify existing or add new file extensions\. You can enable or disable
 
    To enable or disable a file extension, on its details page, use the **Enabled/Disabled** dropdown and choose **Save**\.
 
-The following is the complete list of file extensions that Macie can assign to your objects during classification\.
+The following is the complete list of file extensions that Macie Classic can assign to your objects during classification\.
 
 
 |  |  |  |  | 

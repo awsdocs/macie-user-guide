@@ -1,9 +1,15 @@
-# Researching Through Data Monitored by Amazon Macie<a name="macie-research"></a>
+--------
 
-You can use the **Research** tab in the Macie console to construct and run queries in the query parser and conduct in\-depth investigative research of your data and activity that Macie monitors\. You can navigate to the **Research** tab at any time and construct queries in the empty parser\. For more information, see [Constructing Queries in Macie](#macie-query)\. You can be redirected to the **Research** tab from various places throughout the Macie console: for example, any of the **Dashboard** views \(see [Viewing Data and Activity that Amazon Macie Monitors](macie-dashboard.md)\) or the **Basic alerts** list \(see [Amazon Macie Alerts](macie-alerts.md)\)\. When redirected to the **Research** tab from other places in the console, your data selection is translated into an automatically generated query that appears in the query parser\.
+This is the user guide for Amazon Macie Classic\. For information about the new Amazon Macie, see the [Amazon Macie User Guide](https://docs.aws.amazon.com/macie/latest/user/)\. To access the Macie Classic console, open the Macie console at [https://console\.aws\.amazon\.com/macie/](https://console.aws.amazon.com/macie/), and then choose **Macie Classic** in the navigation pane\.
+
+--------
+
+# Researching Through Data Monitored by Amazon Macie Classic<a name="macie-research"></a>
+
+You can use the **Research** tab in the Macie Classic console to construct and run queries in the query parser and conduct in\-depth investigative research of your data and activity that Macie Classic monitors\. You can navigate to the **Research** tab at any time and construct queries in the empty parser\. For more information, see [Constructing Queries in Macie Classic](#macie-query)\. You can be redirected to the **Research** tab from various places throughout the Macie Classic console: for example, any of the **Dashboard** views \(see [Viewing Data and Activity that Amazon Macie Classic Monitors](macie-dashboard.md)\) or the **Basic alerts** list \(see [Amazon Macie Classic Alerts](macie-alerts.md)\)\. When redirected to the **Research** tab from other places in the console, your data selection is translated into an automatically generated query that appears in the query parser\.
 
 **Topics**
-+ [Constructing Queries in Macie](#macie-query)
++ [Constructing Queries in Macie Classic](#macie-query)
 + [Research Filters](#research-controls)
 + [Saving a Query as an Alert](#searchalert)
 + [Favorite Queries](#searchsavefavorite)
@@ -11,15 +17,15 @@ You can use the **Research** tab in the Macie console to construct and run queri
 + [Researching S3 Bucket Properties Data](s3bucketsdata.md)
 + [Researching S3 Objects Data](s3objectsdata.md)
 
-## Constructing Queries in Macie<a name="macie-query"></a>
+## Constructing Queries in Macie Classic<a name="macie-query"></a>
 
-Macie enables you to construct queries in the query parser in the **Research** tab\. The query parser is a lexer that interprets a string into a Lucene Query using JavaCC\. For more information about query syntax, see [Apache Lucene \- Query Parser Syntax](https://lucene.apache.org/core/2_9_4/queryparsersyntax.html)\.
+Macie Classic enables you to construct queries in the query parser in the **Research** tab\. The query parser is a lexer that interprets a string into a Lucene Query using JavaCC\. For more information about query syntax, see [Apache Lucene \- Query Parser Syntax](https://lucene.apache.org/core/2_9_4/queryparsersyntax.html)\.
 
 The following are example queries for common searches: 
-+ To search for any console login not that didn't originate from IP addresses owned by Amazon: `eventNameIsp.compound:/ConsoleLogin:~(Amazon.*)/`
++ To search for any console login that didn't originate from IP addresses owned by Amazon: `eventNameIsp.compound:/ConsoleLogin:~(Amazon.*)/`
 + To search for PII artifacts inside a public S3 bucket: `filesystem_metadata.bucket:"my-public-bucket" AND (pii_impact:"moderate" OR pii_impact:"high")`
 
-The following tables contains example queries for the Macie date, integer, and string field types\.
+The following tables contains example queries for the Macie Classic date, integer, and string field types\.
 
 ### Example Queries: Date Field Type<a name="macie-query_date"></a>
 
@@ -27,7 +33,7 @@ The following tables contains example queries for the Macie date, integer, and s
 | Example Query | Description | Data Repository | 
 | --- | --- | --- | 
 | `objectsRead.key:* AND @timestamp:[2017-08-01 TO 2017-12-31]` | Search for S3 objects read in the fourth quarter of 2017\. | CloudTrail data | 
-| `sourceIPAddress.ip_intel.type:"TOR" AND @timestamp:[now-1M TO now]` | Search for anonymous accesses to your Macie\-monitored data from Tor exit notes over the last month\. | CloudTrail data | 
+| `sourceIPAddress.ip_intel.type:"TOR" AND @timestamp:[now-1M TO now]` | Search for anonymous accesses to your Macie Classic\-monitored data from Tor exit notes over the last month\. | CloudTrail data | 
 | `macieUniqueId:"085924634393\:assumed-role\:malicious_user" AND @timestamp:[2018-01-18 TO *]` | Search for AWS activities of an assumed role named "malicious\_user" in the AWS account ID 085924634393, starting from January 18, 2018\. | CloudTrail data | 
 
 ### Example Queries: Integer Field Type<a name="macie-query_integer"></a>
@@ -51,14 +57,14 @@ The following tables contains example queries for the Macie date, integer, and s
 
 ## Research Filters<a name="research-controls"></a>
 
-In the Macie **Research** tab, you can apply the following filters to your searches\.
+In the Macie Classic **Research** tab, you can apply the following filters to your searches\.
 
 ### Data Index<a name="where-to-search"></a>
 
-The first **Research** tab filter \(dropdown\) with the preselected default value of **CloudTrail data**, enables you to specifying the index \(or the data repository\) that you want Macie to search through\. This filter includes the following options: 
+The first **Research** tab filter \(dropdown\) with the preselected default value of **CloudTrail data**, enables you to specifying the index \(or the data repository\) that you want Macie Classic to search through\. This filter includes the following options: 
 + **CloudTrail data** – A collection of 5\-minute aggregates of raw CloudTrail data
-+ **S3 bucket properties ** – A collection of metadata about the S3 buckets that Macie is monitoring
-+ **S3 objects** – A collection of metadata about the S3 objects that are stored in the buckets that Macie is monitoring
++ **S3 bucket properties ** – A collection of metadata about the S3 buckets that Macie Classic is monitoring
++ **S3 objects** – A collection of metadata about the S3 objects that are stored in the buckets that Macie Classic is monitoring
 
 ### Number of Results to Display<a name="numberofresults"></a>
 
@@ -80,9 +86,9 @@ The third **Research** tab filter with the preselected default value of **Past 3
 
 ## Saving a Query as an Alert<a name="searchalert"></a>
 
-You can use the following procedure to save a query that appears in the query parser as a basic alert\. For more information about basic alerts, see [Amazon Macie Alerts](macie-alerts.md)\.
+You can use the following procedure to save a query that appears in the query parser as a basic alert\. For more information about basic alerts, see [Amazon Macie Classic Alerts](macie-alerts.md)\.
 
-1. In the Macie console's **Research** tab, either autogenerate or construct a query in the query parser\.
+1. In the Macie Classic console's **Research** tab, either autogenerate or construct a query in the query parser\.
 
 1. Choose the **Save query as alert** icon\.
 
@@ -92,10 +98,10 @@ You can use the following procedure to save a query that appears in the query pa
 
 You can mark queries that you frequently run as favorites and view a list of your favorite queries\.
 
-1. In the Macie console's **Research** tab, either autogenerate or construct a query in the query parser\.
+1. In the Macie Classic console's **Research** tab, either autogenerate or construct a query in the query parser\.
 
 1. Choose the **Mark query as favorite** icon\.
 
 1. Fill out the **Favorite query definition** form by specifying the name and the description for the favorite query and choose **Save**\.
 
-1. To view the list of your favorite queries, in the Macie console's **Research** tab, choose the **Favorite queries** icon\.
+1. To view the list of your favorite queries, in the Macie Classic console's **Research** tab, choose the **Favorite queries** icon\.

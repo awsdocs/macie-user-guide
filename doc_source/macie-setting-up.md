@@ -1,68 +1,54 @@
-# Setting Up Amazon Macie<a name="macie-setting-up"></a>
+--------
 
-When you sign up for AWS, your AWS account is automatically signed up for all services in AWS, including Amazon Macie\. Before you can get started with Macie, you must enable Macie\.
+This is the user guide for Amazon Macie Classic\. For information about the new Amazon Macie, see the [Amazon Macie User Guide](https://docs.aws.amazon.com/macie/latest/user/)\. To access the Macie Classic console, open the Macie console at [https://console\.aws\.amazon\.com/macie/](https://console.aws.amazon.com/macie/), and then choose **Macie Classic** in the navigation pane\.
 
-**Tasks**
-+ If you don't have an AWS account, open [https://portal\.aws\.amazon\.com/billing/signup](https://portal.aws.amazon.com/billing/signup) and follow the directions\.
-+ [Enable Macie](#macie-setting-up-enable)
-+ [Integrate Amazon S3 with Macie](#macie-integrates3)
+--------
 
-## Enable Macie<a name="macie-setting-up-enable"></a>
+# Setting Up Amazon Macie Classic<a name="macie-setting-up"></a>
 
-The AWS account that you use to enable Macie is automatically designated as your master account\. For more information, see [Concepts and Terminology](macie-concepts.md)\.
+When you sign up for AWS, your AWS account is automatically signed up for all services in AWS\. The AWS account that you used when you enabled Macie Classic is automatically designated as your Macie Classic administrator account\. For more information, see [Concepts and Terminology](macie-concepts.md)\.
 
-After you enable Macie, it immediately begins pulling and analyzing independent streams of data from AWS CloudTrail to generate alerts\. Because Macie consumes this data only to determine if there are potential security issues, Macie doesn't manage CloudTrail for you or make its events and logs available to you\. If you have enabled CloudTrail independent of Macie, you continue to have the option to configure its settings through the CloudTrail console or APIs\. For more information, see the [AWS CloudTrail User Guide](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/)\.
+When you enabled Macie Classic, Macie Classic created a service\-linked role\. To learn about the IAM policy for this role, see [Service\-Linked Roles for Amazon Macie Classic](using-service-linked-roles.md)\.
 
-**Prerequisites**
-+ The IAM identity \(user, role, group\) that you use to enable Macie must have the required permissions\. To grant the required permissions, attach the **AmazonMacieFullAccess** managed policy to this identity\. For more information, see [Predefined AWS Managed Policies for Macie](macie-access-control.md#managed-policies)\.
+After you enabled Macie Classic, it immediately began pulling and analyzing independent streams of data from AWS CloudTrail to generate alerts\. Because Macie Classic consumes this data only to determine if there are potential security issues, Macie Classic doesn't manage CloudTrail for you or make its events and logs available to you\. If you enabled CloudTrail independently of Macie Classic, you continue to have the option to configure its settings through the CloudTrail console or APIs\. For more information, see the [AWS CloudTrail User Guide](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/)\.
 
-**To enable Amazon Macie**
+You can disable Macie Classic at any time to stop it from processing and analyzing CloudTrail events\. For more information, see [Disabling Amazon Macie Classic and Deleting Collected Metadata](macie-disable.md)\.
 
-1. Open the Macie console using one of the following links:
-   + US East \(N\. Virginia\): [https://us\-east\-1\.redirection\.macie\.aws\.amazon\.com/](https://us-east-1.redirection.macie.aws.amazon.com/)
-   + US West \(Oregon\): [https://us\-west\-2\.redirection\.macie\.aws\.amazon\.com/](https://us-west-2.redirection.macie.aws.amazon.com/)
+## Integrate Amazon S3 with Macie Classic<a name="macie-integrates3"></a>
 
-1. Choose **Get started**\.
+To classify and protect your data, Macie Classic analyzes and processes information from CloudTrail and Amazon S3\. Enabling CloudTrail in your account is required to use Macie Classic\. Integrating S3 with Macie Classic is not required\. However, we strongly recommend that you integrate with Amazon S3 as part of setting up Macie Classic\. For more information about how Macie Classic classifies your data, see [Classifying Data with Amazon Macie Classic](macie-classify-data.md)\.
 
-1. \(Optional\) When you enable Macie, Macie creates a service\-linked role\. To view the IAM policy for this role, choose **View service role permissions**\. For more information, see [Service\-Linked Roles for Amazon Macie](using-service-linked-roles.md)\.
-
-1. Choose **Enable Macie**\.
-
-You can disable Macie at any time to stop it from processing and analyzing CloudTrail events\. For more information, see [Disabling Amazon Macie and Deleting Collected Metadata](macie-disable.md)\.
-
-## Integrate Amazon S3 with Macie<a name="macie-integrates3"></a>
-
-To classify and protect your data, Macie analyzes and processes information from CloudTrail and Amazon S3\. Enabling CloudTrail in your account is required to enable Macie\. Integrating S3 with Macie is not required\. However, we strongly recommend that you integrate with Amazon S3 as part of setting up Macie\. For more information about how Macie classifies your data, see [Classifying Data with Amazon Macie](macie-classify-data.md)\.
-
-When you integrate with Amazon S3, Macie creates a trail and a bucket to store the logs about the Amazon S3 object\-level API activity \(data events\) that it will analyze, along with other CloudTrail logs that it processes\.
+When you integrate with Amazon S3, Macie Classic creates a trail and a bucket to store the logs about the Amazon S3 object\-level API activity \(data events\) that it will analyze, along with other CloudTrail logs that it processes\.
 
 **Prerequisites**
-+ The IAM identity \(user, role, group\) that you use to integrate must have the required permissions\. To grant the required permissions, attach the **AmazonMacieFullAccess** managed policy to this identity\. For more information, see [Predefined AWS Managed Policies for Macie](macie-access-control.md#managed-policies)\.
++ The IAM identity \(user, role, group\) that you use to integrate must have the required permissions\. To grant the required permissions, attach the **AmazonMacieFullAccess** managed policy to this identity\. For more information, see [Predefined AWS Managed Policies for Macie Classic](macie-access-control.md#managed-policies)\.
 
 **To integrate with Amazon S3**
 
-1. Log in to AWS with the credentials of the account that is serving as your Macie master account\.
+1. Log in to AWS with the credentials of the account that is serving as your Macie Classic administrator account\.
 
-1. Open the Macie console and choose **Integrations** from the navigation pane\.
+1. Open the Amazon Macie console and choose **Macie Classic** in the navigation pane\.
 
-1. Choose **S3 Resources** and choose **Select** next to the account \(master or member\)\.
+1. Choose **Integrations** from the navigation pane\.
 
-1. On the **Integrate S3 resources with Macie** page, choose **Add**\. Select up to 250 Amazon S3 resources from the current AWS Region and then choose **Add**\.
+1. Choose **S3 Resources** and choose **Select** next to the account \(administrator or member\)\.
+
+1. On the **Integrate S3 resources with Macie Classic** page, choose **Add**\. Select up to 250 Amazon S3 resources in the current AWS Region and then choose **Add**\.
 
 1. For **Classification of existing objects**, keep the default setting, **Full**\. The one\-time classification method is applied only once to all of the existing objects in the selected S3 buckets\.
 
-   Macie displays the following information for each selected bucket:
+   Macie Classic displays the following information for each selected bucket:
    + **Total objects** – Total number of objects\.
-   + **Processed estimate** – Total size of the data that Macie will classify\.
+   + **Processed estimate** – Total size of the data that Macie Classic will classify\.
    + **Cost estimate** – Cost estimate for classifying all of the objects\.
 
-   Macie also displays the following totals across all selected buckets:
+   Macie Classic also displays the following totals across all selected buckets:
    + **Total size** – Total size of the data\.
    + **Total number of objects** – Total number of objects\.
-   + **Processed estimate** – Total size of the data that Macie will classify\.
+   + **Processed estimate** – Total size of the data that Macie Classic will classify\.
    + **Total cost estimate** – Cost estimate for classifying all of the objects\.
 
-   The cost estimate for each bucket is based on its processed estimate value\. The total cost estimates are provided only for S3 buckets, not for prefixes\. For more information, see [Amazon Macie Pricing](http://aws.amazon.com/macie/pricing/)\.
+   The cost estimate for each bucket is based on its processed estimate value\. The total cost estimates are provided only for S3 buckets, not for prefixes\. For more information, see [Amazon Macie Classic Pricing](http://aws.amazon.com/macie/pricing/)\.
 
    The one\-time classification cost estimates are only calculated per S3 bucket, not bucket prefixes\. If you select a bucket prefix, the cost estimate for the entire S3 bucket is included in the total cost estimate\. If you select multiple prefixes of the same S3 bucket, the cost estimate for the entire S3 bucket is included only once in the total cost estimate\.
 

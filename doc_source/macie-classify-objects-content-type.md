@@ -1,16 +1,22 @@
+--------
+
+This is the user guide for Amazon Macie Classic\. For information about the new Amazon Macie, see the [Amazon Macie User Guide](https://docs.aws.amazon.com/macie/latest/user/)\. To access the Macie Classic console, open the Macie console at [https://console\.aws\.amazon\.com/macie/](https://console.aws.amazon.com/macie/), and then choose **Macie Classic** in the navigation pane\.
+
+--------
+
 # Content Type<a name="macie-classify-objects-content-type"></a>
 
-Once Macie begins monitoring your data, it uses several automatic content classification methods to identify and prioritize your sensitive and critical data and to accurately assign business value to your data\. One of these methods is classifying by content type\.
+Once Macie Classic begins monitoring your data, it uses several automatic content classification methods to identify and prioritize your sensitive and critical data and to accurately assign business value to your data\. One of these methods is classifying by content type\.
 
-To classify your data objects by content type, Macie uses an identifier that is embedded in the file header\. Macie offers a set of managed \(Macie\-curated\) content types, each with a designated risk level between 1 and 10, with 10 being the highest risk and 1 being the lowest\.
+To classify your data objects by content type, Macie Classic uses an identifier that is embedded in the file header\. Macie Classic offers a set of managed \(Macie Classic\-curated\) content types, each with a designated risk level between 1 and 10, with 10 being the highest risk and 1 being the lowest\.
 
-Macie can assign only one content type to an object\.
+Macie Classic can assign only one content type to an object\.
 
-You can't modify existing or add new content types\. You can enable or disable any existing content types, thus enabling or disabling Macie to assign these them to your objects during the classification process\.<a name="enable-disable-content-types"></a>
+You can't modify existing or add new content types\. You can enable or disable any existing content types, thus enabling or disabling Macie Classic to assign these them to your objects during the classification process\.<a name="enable-disable-content-types"></a>
 
 **To view, enable, or disable content types**
 
-1. In the Macie console, navigate to the **Settings** page\.
+1. In the Macie Classic console, navigate to the **Settings** page\.
 
 1. In the **Classify data** section, choose **Content types**\.
 
@@ -18,7 +24,7 @@ You can't modify existing or add new content types\. You can enable or disable a
 
    To enable or disable a content type, on its details page, use the **Enabled/Disabled** dropdown and choose **Save**\.
 
-The following list describes the complete list of content types that Macie can assign to your objects\.
+The following list describes the complete list of content types that Macie Classic can assign to your objects\.
 
 
 |  |  |  |  | 

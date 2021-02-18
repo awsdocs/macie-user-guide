@@ -1,4 +1,10 @@
-# Controlling Access to Amazon Macie<a name="macie-access-control"></a>
+--------
+
+This is the user guide for Amazon Macie Classic\. For information about the new Amazon Macie, see the [Amazon Macie User Guide](https://docs.aws.amazon.com/macie/latest/user/)\. To access the Macie Classic console, open the Macie console at [https://console\.aws\.amazon\.com/macie/](https://console.aws.amazon.com/macie/), and then choose **Macie Classic** in the navigation pane\.
+
+--------
+
+# Controlling Access to Amazon Macie Classic<a name="macie-access-control"></a>
 
 AWS uses security credentials to identify you and to grant you access to your AWS resources\. You can use features of AWS Identity and Access Management \(IAM\) to allow other users, services, and applications to use your AWS resources fully or in a limited way\. You can do this without sharing your security credentials\.
 
@@ -14,11 +20,11 @@ For example, you can use IAM to create users and groups under your AWS account\.
 
 For more information, see the [IAM User Guide](https://docs.aws.amazon.com/IAM/latest/UserGuide/)\.
 
-## Granting Administrator Access to Macie<a name="admin-access"></a>
+## Granting Administrator Access to Macie Classic<a name="admin-access"></a>
 
-The master account users have access to the Macie console, where they can configure Macie and use it to monitor and protect the resources in both master and member accounts\. For more information about master and member accounts, see [Concepts and Terminology](macie-concepts.md) and [Integrating Member Accounts and Amazon S3 with Amazon Macie](macie-integration.md)\. 
+Macie Classic administrator account users have access to the Macie Classic console, where they can configure Macie Classic and use it to monitor and protect the resources in both administrator and member accounts\. For more information about Macie Classic administrator and member accounts, see [Concepts and Terminology](macie-concepts.md) and [Integrating Member Accounts and Amazon S3 with Amazon Macie Classic](macie-integration.md)\. 
 
-For the master account users to be able to use the Macie console, they must be granted the required permissions\. To ensure this, use the following policy document to create and attach an IAM policy to any user identity type that belongs to your master Macie account\. This policy grants master account users permissions to use the Macie console in its full capacity\.
+For Macie Classic administrator account users to be able to use the Macie Classic console, they must be granted the required permissions\. To ensure this, use the following policy document to create and attach an IAM policy to any user identity type that belongs to your Macie Classic administrator account\. This policy grants administrator account users with the permissions that are required to use the Macie Classic console in its full capacity\.
 
 ```
 {
@@ -45,9 +51,9 @@ For the master account users to be able to use the Macie console, they must be g
 }
 ```
 
-## Granting Read\-Only Access to Macie<a name="read-access"></a>
+## Granting Read\-Only Access to Macie Classic<a name="read-access"></a>
 
-For a user to view any data in the Macie console, they must be granted the required permissions\. To grant read\-only access, create a custom policy using the following policy document and attach it to a IAM user, group, or role\. This policy grants users permissions to only view information in the Macie console\.
+For a user to view any data in the Macie Classic console, they must be granted the required permissions\. To grant read\-only access, create a custom policy using the following policy document and attach it to an IAM user, group, or role\. This policy grants users permissions to only view information on the Macie Classic console\.
 
 ```
 {
@@ -55,9 +61,7 @@ For a user to view any data in the Macie console, they must be granted the requi
     "Statement": [
         {
             "Action": [
-                "macie:Get*",
-                "macie:List*",
-                "macie:Describe*"
+                "macie:List*"
             ],
             "Resource": [
                 "*"
@@ -68,19 +72,19 @@ For a user to view any data in the Macie console, they must be granted the requi
 }
 ```
 
-## Predefined AWS Managed Policies for Macie<a name="managed-policies"></a>
+## Predefined AWS Managed Policies for Macie Classic<a name="managed-policies"></a>
 
-The managed policies created by AWS grant the required permissions for common use cases\. You can attach these policies to IAM users in your AWS account, based on the access to Macie that they require:
-+ **AmazonMacieFullAccess** – Grants full access to Macie
-+ **AmazonMacieHandshakeRole** – Grants permission to create the service\-linked role for Macie
+The managed policies created by AWS grant the required permissions for common use cases\. You can attach these policies to IAM users in your AWS account, based on the access to Macie Classic that they require:
++ **AmazonMacieFullAccess** – Grants full access to Macie Classic
++ **AmazonMacieHandshakeRole** – Grants permission to create the service\-linked role for Macie Classic
 
-The following are legacy policies that have been replaced by a service\-linked role\. For more information, see [Legacy Roles for Macie](using-service-linked-roles.md#macie-legacy-roles)\.
-+ **AmazonMacieServiceRole** – Grants Macie read\-only access to resource dependencies in your account in order to enable data analysis
-+ **AmazonMacieSetupRole** – Grants Macie access to your AWS account
+The following are legacy policies that have been replaced by a service\-linked role\. For more information, see [Legacy Roles for Macie Classic](using-service-linked-roles.md#macie-legacy-roles)\.
++ **AmazonMacieServiceRole** – Grants Macie Classic read\-only access to resource dependencies in your account in order to enable data analysis
++ **AmazonMacieSetupRole** – Grants Macie Classic access to your AWS account
 
 ## Creating a Handshake Role<a name="create-handshake-role"></a>
 
-You can create a role that grants the permissions in the **AmazonMacieHandshakeRole** policy to Macie from the master account as follows\.<a name="create-iam-role-console"></a>
+You can create a role that grants the permissions in the **AmazonMacieHandshakeRole** policy to Macie Classic from the administrator account as follows\.<a name="create-iam-role-console"></a>
 
 **To create AWSMacieServiceCustomerHandshakeRole using the IAM console**
 
@@ -104,7 +108,7 @@ You can create a role that grants the permissions in the **AmazonMacieHandshakeR
 
    1. For **Role name**, enter **AWSMacieServiceCustomerHandshakeRole**\.
 
-   1. For **Role description**, enter the following: Allows the master account to create service\-linked roles in the member accounts\.
+   1. For **Role description**, enter the following: Allows the Macie Classic administrator account to create service\-linked roles in the member accounts\.
 
    1. Choose **Create role**\.
 
@@ -128,7 +132,7 @@ You can create a role that grants the permissions in the **AmazonMacieHandshakeR
             "Action": "sts:AssumeRole",
             "Condition": {
               "StringEquals": {
-                "sts:ExternalId": "master-account-id"
+                "sts:ExternalId": "administrator-account-id"
               }
             }
           }
@@ -154,7 +158,7 @@ You can create a role that grants the permissions in the **AmazonMacieHandshakeR
          "Action": "sts:AssumeRole",
          "Condition": {
            "StringEquals": {
-             "sts:ExternalId": "master-account-id"
+             "sts:ExternalId": "administrator-account-id"
            }
          }
        }

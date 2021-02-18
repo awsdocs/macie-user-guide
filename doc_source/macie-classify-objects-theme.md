@@ -1,16 +1,22 @@
+--------
+
+This is the user guide for Amazon Macie Classic\. For information about the new Amazon Macie, see the [Amazon Macie User Guide](https://docs.aws.amazon.com/macie/latest/user/)\. To access the Macie Classic console, open the Macie console at [https://console\.aws\.amazon\.com/macie/](https://console.aws.amazon.com/macie/), and then choose **Macie Classic** in the navigation pane\.
+
+--------
+
 # Theme<a name="macie-classify-objects-theme"></a>
 
-Once Macie begins monitoring your data, it uses several automatic content classification methods to identify and prioritize your sensitive and critical data and to accurately assign business value to your data\. One of these methods is classifying by theme\.
+Once Macie Classic begins monitoring your data, it uses several automatic content classification methods to identify and prioritize your sensitive and critical data and to accurately assign business value to your data\. One of these methods is classifying by theme\.
 
-Object classification by theme is based on keywords that Macie searches for as it examines the contents of data objects\. Macie offers a set of managed themes, each with a designated risk level between 1 and 10, with 10 being the highest risk and 1 being the lowest\.
+Object classification by theme is based on keywords that Macie Classic searches for as it examines the contents of data objects\. Macie Classic offers a set of managed themes, each with a designated risk level between 1 and 10, with 10 being the highest risk and 1 being the lowest\.
 
-Macie can assign one or more themes to an object\.
+Macie Classic can assign one or more themes to an object\.
 
-You can't modify existing or add new themes\. You can enable or disable any existing themes, thus enabling or disabling Macie to assign them to your objects during the classification process\.<a name="enable-disable-themes"></a>
+You can't modify existing or add new themes\. You can enable or disable any existing themes, thus enabling or disabling Macie Classic to assign them to your objects during the classification process\.<a name="enable-disable-themes"></a>
 
 **To view, enable, or disable themes**
 
-1. In the Macie console, navigate to the **Settings** page\.
+1. In the Macie Classic console, navigate to the **Settings** page\.
 
 1. In the **Classify data** section, choose **Themes**\.
 
@@ -18,7 +24,7 @@ You can't modify existing or add new themes\. You can enable or disable any exis
 
    To enable or disable a theme, on its details page, use the **Enabled/Disabled** dropdown and then choose **Save**\.
 
-The following is the complete list of themes that Macie can assign to your objects during classification\.
+The following is the complete list of themes that Macie Classic can assign to your objects during classification\.
 
 
 |  |  |  | 
