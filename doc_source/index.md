@@ -1,7 +1,7 @@
 # Amazon Macie Classic User Guide
 
 -----
-*****Copyright &copy; 2021 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
+*****Copyright &copy; Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
 Amazon's trademarks and trade dress may not be used in 
@@ -20,6 +20,7 @@ Amazon's trademarks and trade dress may not be used in
 + [Setting Up Amazon Macie Classic](macie-setting-up.md)
    + [Controlling Access to Amazon Macie Classic](macie-access-control.md)
    + [Service-Linked Roles for Amazon Macie Classic](using-service-linked-roles.md)
+   + [AWS Managed Policies for Amazon Macie and Amazon Macie Classic](security-iam-awsmanpol.md)
 + [Integrating Member Accounts and Amazon S3 with Amazon Macie Classic](macie-integration.md)
 + [Classifying Data with Amazon Macie Classic](macie-classify-data.md)
    + [Supported Compression and Archive File Formats](macie-compression-archive-formats.md)

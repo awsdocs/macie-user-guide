@@ -6,7 +6,7 @@ This is the user guide for Amazon Macie Classic\. For information about the new 
 
 # Protecting Data with Amazon Macie Classic<a name="macie-protect-data"></a>
 
-Macie Classic can help you monitor how your sensitive and business\-critical data stored in the cloud is being used\. Macie Classic applies artificial intelligence to understand historical data access patterns and automatically assesses activity of users, applications, and service accounts\. This can help you detect unauthorized access and avoid data leaks\.
+Macie Classic can help you monitor how your sensitive and business\-critical data stored in the Amazon Web Services Cloud is being used\. Macie Classic applies artificial intelligence to understand historical data access patterns and automatically assesses activity of users, applications, and service accounts\. This can help you detect unauthorized access and avoid data leaks\.
 
 After you enable Macie Classic, it uses the following automated methods to protect your data\.
 

@@ -50,7 +50,7 @@ For this data repository \(CloudTrail\), your search always returns a list of us
 
 | Macie Classic Field Name | CloudTrail Field Name | Macie Classic Field Type | Description | Example Search Query | 
 | --- | --- | --- | --- | --- | 
-| `accountId` | `userIdentity.accountId` | String | The AWS account ID\.  | Search for user sessions with accesses related to a particular account:  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/macie/latest/userguide/cloudtraildata.html)  | 
+| `accountId` | `userIdentity.accountId` | String | The Amazon Web Services account ID\.  | Search for user sessions with accesses related to a particular account:  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/macie/latest/userguide/cloudtraildata.html)  | 
 | `awsRegion.key` | `awsRegion` | String | The AWS Region that the request is made to\.  | Search for user sessions with any AWS API calls by Region:  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/macie/latest/userguide/cloudtraildata.html)  | 
 | `eventNameErrorCode.key` | `eventName` | String |  The event name that resulted in the returned \(if any\) error code\.   |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/macie/latest/userguide/cloudtraildata.html)  | 
 | `eventNameErrorCode.secondary` | `errorCode` | String | The error code returned after an unsuccessful API request\.  | Search for user sessions with any `AccessDenied` error across all CloudTrail API events:  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/macie/latest/userguide/cloudtraildata.html)  | 

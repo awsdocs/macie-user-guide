@@ -22,7 +22,7 @@ When you integrate member accounts with Macie Classic, you're enabling Macie Cla
 
 **To integrate member accounts with Macie Classic**
 
-1. Log in to AWS with the credentials of the AWS account that is serving as your Macie Classic administrator account\.
+1. Log in to AWS with the credentials of the Amazon Web Services account that is serving as your Macie Classic administrator account\.
 
 1. Open the Macie Classic console and choose **Integrations** from the navigation pane\.
 

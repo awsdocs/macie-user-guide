@@ -6,7 +6,7 @@ This is the user guide for Amazon Macie Classic\. For information about the new 
 
 # Classifying Data with Amazon Macie Classic<a name="macie-classify-data"></a>
 
-Macie Classic can help you classify your sensitive and business\-critical data stored in the AWS cloud\. Currently, Macie Classic analyzes and processes data stored in Amazon S3 buckets\. To classify your data, Macie Classic also uses the ability in AWS CloudTrail to capture object\-level API activity on S3 objects \(data events\)\. However, Macie Classic monitors CloudTrail data events only if you specify at least one S3 bucket for Macie Classic to monitor\. 
+Macie Classic can help you classify your sensitive and business\-critical data stored in Amazon Simple Storage Service \(Amazon S3\); buckets\. To classify your data, Macie Classic also uses the ability in AWS CloudTrail to capture object\-level API activity on S3 objects \(data events\)\. However, Macie Classic monitors CloudTrail data events only if you specify at least one S3 bucket for Macie Classic to monitor\. 
 
 After you specify the S3 bucket or buckets for Macie Classic to monitor, you enable Macie Classic to continuously monitor and discover new data as it enters your AWS infrastructure\. For more information, see [Specifying Data for Macie Classic to Monitor](macie-integration.md#macie-integration-services)\.
 

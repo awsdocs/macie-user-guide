@@ -9,7 +9,7 @@ This is the user guide for Amazon Macie Classic\. For information about the new 
 As you get started with Amazon Macie Classic, you can benefit from learning about its key concepts\. 
 
 **Account**  
-A standard AWS account that contains your AWS resources\. When you sign up for Amazon Web Services \(AWS\), your account is automatically signed up for all services in AWS\. The account that you used to sign in to AWS when you enabled Macie Classic is designated as the *administrator account*\.  
+A standard Amazon Web Services \(AWS\) account that contains your AWS resources\. When you sign up for AWS, your account is automatically signed up for all services in AWS\. The account that you used to sign in to AWS when you enabled Macie Classic is designated as the *administrator account*\.  
 If you integrated other accounts with Macie Classic, these accounts are called *member accounts*\.   
 No users of member accounts are granted access to the Macie Classic console\. Only users of a Macie Classic administrator account have access to the Macie Classic console, where they can configure Macie Classic and monitor and protect the resources in both administrator and member accounts\. 
 
@@ -33,11 +33,11 @@ Amazon Simple Storage Service \(Amazon S3\) is storage for the Internet\. Amazon
 
 **User**  
 In the context of Macie Classic, a user is the AWS Identity and Access Management \(IAM\) identity that makes the request\. Macie Classic uses the CloudTrail `userIdentity` element to distinguish the following user types\. For more information, see [CloudTrail userIdentity Element](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-event-reference-user-identity.html)\.   
-+ Root – The request was made with your account credentials\.
++ Root – The request was made with your Amazon Web Services account credentials\.
 + IAM user – The request was made with the credentials of an IAM user\. 
 + Assumed role – The request was made with temporary security credentials that were obtained with a role via a call to the AWS Security Token Service \(AWS STS\) `AssumeRole` API operation\. 
 + Federated user – The request was made with temporary security credentials that were obtained via a call to the AWS STS `GetFederationToken` API operation\.
-+ AWS account – The request was made by another account\. 
++ AWS account – The request was made by another Amazon Web Services account\. 
 + AWS service – The request was made by an account that belongs to an AWS service\. 
 When specifying a user in the Macie Classic console, you must use a special Macie Classic format called `macieUniqueId`\. Examples of specifying a user include searching for a user in the **Users** tab, constructing a query in the **Research** tab, and explicitly allowing a user in a basic alert with the index of **CloudTrail data**\. The `macieUniqueId` is a combination of the IAM `UserIdentity` element and the `recipientAccountId`\. For more information, see the preceding list of `UserIdentity` elements and the definition of `recipientAccountId` in the [CloudTrail Record Contents](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-event-reference-record-contents.html)\. The following examples list various structures of `macieUniqueId`, depending on the user identity type:  
 + `123456789012:root`

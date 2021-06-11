@@ -6,7 +6,7 @@ This is the user guide for Amazon Macie Classic\. For information about the new 
 
 # Setting Up Amazon Macie Classic<a name="macie-setting-up"></a>
 
-When you sign up for AWS, your AWS account is automatically signed up for all services in AWS\. The AWS account that you used when you enabled Macie Classic is automatically designated as your Macie Classic administrator account\. For more information, see [Concepts and Terminology](macie-concepts.md)\.
+When you sign up for Amazon Web Services, your Amazon Web Services account is automatically signed up for all services in Amazon Web Services\. The Amazon Web Services account that you used when you enabled Macie Classic is automatically designated as your Macie Classic administrator account\. For more information, see [Concepts and Terminology](macie-concepts.md)\.
 
 When you enabled Macie Classic, Macie Classic created a service\-linked role\. To learn about the IAM policy for this role, see [Service\-Linked Roles for Amazon Macie Classic](using-service-linked-roles.md)\.
 
@@ -25,7 +25,7 @@ When you integrate with Amazon S3, Macie Classic creates a trail and a bucket to
 
 **To integrate with Amazon S3**
 
-1. Log in to AWS with the credentials of the account that is serving as your Macie Classic administrator account\.
+1. Log in to Amazon Web Services \(AWS\) with the credentials of the account that is serving as your Macie Classic administrator account\.
 
 1. Open the Amazon Macie console and choose **Macie Classic** in the navigation pane\.
 

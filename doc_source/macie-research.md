@@ -34,7 +34,7 @@ The following tables contains example queries for the Macie Classic date, intege
 | --- | --- | --- | 
 | `objectsRead.key:* AND @timestamp:[2017-08-01 TO 2017-12-31]` | Search for S3 objects read in the fourth quarter of 2017\. | CloudTrail data | 
 | `sourceIPAddress.ip_intel.type:"TOR" AND @timestamp:[now-1M TO now]` | Search for anonymous accesses to your Macie Classic\-monitored data from Tor exit notes over the last month\. | CloudTrail data | 
-| `macieUniqueId:"085924634393\:assumed-role\:malicious_user" AND @timestamp:[2018-01-18 TO *]` | Search for AWS activities of an assumed role named "malicious\_user" in the AWS account ID 085924634393, starting from January 18, 2018\. | CloudTrail data | 
+| `macieUniqueId:"085924634393\:assumed-role\:malicious_user" AND @timestamp:[2018-01-18 TO *]` | Search for AWS activities of an assumed role named "malicious\_user" in the account ID 085924634393, starting from January 18, 2018\. | CloudTrail data | 
 
 ### Example Queries: Integer Field Type<a name="macie-query_integer"></a>
 

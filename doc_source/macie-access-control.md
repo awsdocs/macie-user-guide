@@ -16,7 +16,7 @@ By default, IAM users don't have permission to create, view, or modify AWS resou
 
 When you attach a policy to a user or group of users, it allows or denies the users permission to perform the specified tasks on the specified resources\.
 
-For example, you can use IAM to create users and groups under your AWS account\. An IAM user can be a person, a system, or an application\. Then you grant permissions to the users and groups to perform specific actions on the specified resources using an IAM policy\.
+For example, you can use IAM to create users and groups under your Amazon Web Services account\. An IAM user can be a person, a system, or an application\. Then you grant permissions to the users and groups to perform specific actions on the specified resources using an IAM policy\.
 
 For more information, see the [IAM User Guide](https://docs.aws.amazon.com/IAM/latest/UserGuide/)\.
 
@@ -74,13 +74,13 @@ For a user to view any data in the Macie Classic console, they must be granted t
 
 ## Predefined AWS Managed Policies for Macie Classic<a name="managed-policies"></a>
 
-The managed policies created by AWS grant the required permissions for common use cases\. You can attach these policies to IAM users in your AWS account, based on the access to Macie Classic that they require:
+The managed policies created by AWS grant the required permissions for common use cases\. You can attach these policies to IAM users in your Amazon Web Services account, based on the access to Macie Classic that they require:
 + **AmazonMacieFullAccess** – Grants full access to Macie Classic
 + **AmazonMacieHandshakeRole** – Grants permission to create the service\-linked role for Macie Classic
 
 The following are legacy policies that have been replaced by a service\-linked role\. For more information, see [Legacy Roles for Macie Classic](using-service-linked-roles.md#macie-legacy-roles)\.
 + **AmazonMacieServiceRole** – Grants Macie Classic read\-only access to resource dependencies in your account in order to enable data analysis
-+ **AmazonMacieSetupRole** – Grants Macie Classic access to your AWS account
++ **AmazonMacieSetupRole** – Grants Macie Classic access to your Amazon Web Services account
 
 ## Creating a Handshake Role<a name="create-handshake-role"></a>
 

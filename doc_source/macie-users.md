@@ -16,12 +16,12 @@ The **Users** tab can help you draw a comprehensive picture of all of the data a
 ## Macie ClassicUniqueID<a name="macie-users-concepts"></a>
 
 In the context of Macie Classic, a user is the AWS Identity and Access Management \(IAM\) identity that makes a particular request\. Macie Classic uses the AWS CloudTrail `userIdentity` element to distinguish the following user types\. For more information, see [CloudTrail userIdentity Element](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-event-reference-user-identity.html)\. 
-+ Root – The request was made with your AWS account credentials\.
-+ IAM user – The request was made with the credentials of an IAM user\. 
-+ Assumed role – The request was made with temporary security credentials that were obtained with a role via a call to the AWS Security Token Service \(AWS STS\) `AssumeRole` API operation\. 
-+ Federated user – The request was made with temporary security credentials that were obtained via a call to the AWS STS `GetFederationToken` API operation\.
-+ AWS account – The request was made by another account\. 
-+ AWS service – The request was made by an account that belongs to an AWS service\. 
++ **Root** – The request was made with your Amazon Web Services account credentials\.
++ **IAM user** – The request was made with the credentials of an IAM user\. 
++ **Assumed role** – The request was made with temporary security credentials that were obtained with a role via a call to the AWS Security Token Service \(AWS STS\) `AssumeRole` API operation\. 
++ **Federated user** – The request was made with temporary security credentials that were obtained via a call to the AWS STS `GetFederationToken` API operation\.
++ **AWS account** – The request was made by another Amazon Web Services account\. 
++ **AWS service** – The request was made by an account that belongs to an AWS service\. 
 
 When specifying a user in the Macie Classic console, you must use a special Macie Classic format called `macieUniqueId`\. Examples of specifying a user include searching for a user in the **Users** tab, constructing a query in the **Research** tab, and explicitly allowing a user in a basic alert with the index of **CloudTrail data**\. The `macieUniqueId` is a combination of the IAM `UserIdentity` element and the `recipientAccountId`\. For more information, see [CloudTrail userIdentity Element](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-event-reference-user-identity.html) and the definition of `recipientAccountId` in [CloudTrail Record Contents](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-event-reference-record-contents.html)\. 
 

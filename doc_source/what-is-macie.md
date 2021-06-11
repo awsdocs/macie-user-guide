@@ -38,7 +38,7 @@ Amazon Macie Classic enables you to be proactive with security compliance and ac
 
 ## Accessing Macie Classic<a name="macie-accessing"></a>
 
-The Macie Classic console is a browser\-based interface for accessing and using Macie Classic\. Sign in to your AWS account and open the Macie Classic console using one of the following links:
+The Macie Classic console is a browser\-based interface for accessing and using Macie Classic\. Sign in to your Amazon Web Services account and open the Macie Classic console using one of the following links:
 + [https://us\-east\-1\.redirection\.macie\.aws\.amazon\.com/](https://us-east-1.redirection.macie.aws.amazon.com/)
 + [https://us\-west\-2\.redirection\.macie\.aws\.amazon\.com/](https://us-west-2.redirection.macie.aws.amazon.com/)
 
